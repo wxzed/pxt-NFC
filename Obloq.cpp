@@ -19,6 +19,11 @@ namespace Obloq {
     }
 
     //%
+    int obloqRxBufferedSize(){
+        return uBit.serial.rxBufferedSize();
+    }
+
+    //%
     void obloqEventOn(){
         uBit.serial.eventOn(ManagedString('\r'), MicroBitSerialMode::ASYNC);
     }
@@ -53,4 +58,5 @@ namespace Obloq {
       }
       uBit.serial.send(ManagedString(text));
     }
+
 }
